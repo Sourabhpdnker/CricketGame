@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Game</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url(./backgroundimg/Virat_Kohli_1699157766710_1699157767017.avif);
+            background-color: rgb(255, 221, 221);
+        }
+        #main-heading{
+            font-size: 60px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            animation: colors 10s infinite;
+        }
+        h1 {
+            color: rgb(0, 0, 0);
+        }
+
+        div {
+            margin-top: 50px;
+            margin-left: 800px;
+        }
+
+        button {
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 103, 2);
+            padding: 8px 15px;
+            font-size: large;
+            font-weight: 600;
+            border-radius: 6px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+
+        button:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 4, 15);
+            padding: 10px 14px;
+            font-size: large;
+            font-weight: 400;
+            border-radius: 6px;
+            box-shadow: inset black;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        @keyframes colors {
+            0%{
+                color: rgb(0, 0, 0);
+            }
+            25%{
+                color: rgb(0, 19, 105);
+            }
+            50%{
+                color: rgb(112, 0, 134);
+            }
+            75%{
+                color: rgb(133, 0, 66);
+            }
+            100%{
+                color: rgb(70, 0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div> 
+        <h1 id="main-heading">Bat Ball Stump Game</h1>
+        <!-- <img src="./backgroundimg/_128258572_gettyimages-1435855432.jpg" alt="tnw"> -->
+        <button onclick="
+            gnrtComputerchic();
+            resultMsg = getResult('Bat',computerChoice);
+            showResult('Bat',computerChoice,resultMsg)">Bat
+        </button>
+        <button onclick="
+            gnrtComputerchic();
+            resultMsg = getResult('Ball',computerChoice);
+            showResult('Ball',computerChoice,resultMsg)"> Ball
+        </button>
+
+        <button onclick="
+            gnrtComputerchic();
+            resultMsg = getResult('Stump',computerChoice);
+            showResult('Stump',computerChoice,resultMsg)">Stump
+        </button>
+         <br>
+         <br>
+        <button id="reset" onclick="localStorage.clear();
+        resetScore(); 
+        ">Reset Score</button>
+        <br>
+        <br>
+        <h2 id="user-move">Chose Your Choice.</h2>
+        <h2 id="computer-move"></h2>
+        <h2 id="result"></h2>
+        <h1 id="score"></h1>
+    </div>
+    <script <script src="web.js">
+    </script>> 
+</body>
+</html>
